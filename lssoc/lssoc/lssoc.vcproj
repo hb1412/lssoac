@@ -204,6 +204,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\MessageDeliverClient.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\MessageDeliverServer.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\stdafx.cpp"
 				>
 				<FileConfiguration
@@ -230,6 +238,14 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\Constants.h"
+				>
+			</File>
+			<File
+				RelativePath=".\DataStructure.h"
+				>
+			</File>
+			<File
 				RelativePath=".\Form1.h"
 				FileType="3"
 				>
@@ -238,6 +254,14 @@
 					SubType="Designer"
 					>
 				</File>
+			</File>
+			<File
+				RelativePath=".\MessageDeliverClient.h"
+				>
+			</File>
+			<File
+				RelativePath=".\MessageDeliverServer.h"
+				>
 			</File>
 			<File
 				RelativePath=".\resource.h"

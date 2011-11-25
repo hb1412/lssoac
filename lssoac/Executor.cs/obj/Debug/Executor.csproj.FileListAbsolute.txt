@@ -1,0 +1,7 @@
+G:\lssoac\WindowsFormsApplication1\Executor.cs\bin\Debug\Executor.cs.exe
+G:\lssoac\WindowsFormsApplication1\Executor.cs\bin\Debug\Executor.cs.pdb
+G:\lssoac\WindowsFormsApplication1\Executor.cs\obj\Debug\ResolveAssemblyReference.cache
+G:\lssoac\WindowsFormsApplication1\Executor.cs\obj\Debug\Executor.cs.Properties.Resources.resources
+G:\lssoac\WindowsFormsApplication1\Executor.cs\obj\Debug\Executor.csproj.GenerateResource.Cache
+G:\lssoac\WindowsFormsApplication1\Executor.cs\obj\Debug\Executor.cs.exe
+G:\lssoac\WindowsFormsApplication1\Executor.cs\obj\Debug\Executor.cs.pdb

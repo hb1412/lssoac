@@ -1,0 +1,12 @@
+G:\lssoac\WindowsFormsApplication1\Controller\bin\Debug\Controller.exe
+G:\lssoac\WindowsFormsApplication1\Controller\bin\Debug\Controller.pdb
+G:\lssoac\WindowsFormsApplication1\Controller\obj\Debug\ResolveAssemblyReference.cache
+G:\lssoac\WindowsFormsApplication1\Controller\obj\Debug\Controller.Form1.resources
+G:\lssoac\WindowsFormsApplication1\Controller\obj\Debug\Controller.Properties.Resources.resources
+G:\lssoac\WindowsFormsApplication1\Controller\obj\Debug\Controller.csproj.GenerateResource.Cache
+G:\lssoac\WindowsFormsApplication1\Controller\obj\Debug\Controller.exe
+G:\lssoac\WindowsFormsApplication1\Controller\obj\Debug\Controller.pdb
+G:\lssoac\NetworkServiceAgent\Controller\obj\Debug\Controller.exe
+G:\lssoac\NetworkServiceAgent\Controller\obj\Debug\Controller.pdb
+G:\lssoac\lssoac\Controller\obj\Debug\Controller.exe
+G:\lssoac\lssoac\Controller\obj\Debug\Controller.pdb

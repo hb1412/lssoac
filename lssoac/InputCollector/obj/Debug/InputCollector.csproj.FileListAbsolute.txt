@@ -1,0 +1,7 @@
+G:\lssoac\WindowsFormsApplication1\InputCollector\bin\Debug\InputCollector.exe
+G:\lssoac\WindowsFormsApplication1\InputCollector\bin\Debug\InputCollector.pdb
+G:\lssoac\WindowsFormsApplication1\InputCollector\obj\Debug\ResolveAssemblyReference.cache
+G:\lssoac\WindowsFormsApplication1\InputCollector\obj\Debug\InputCollector.Properties.Resources.resources
+G:\lssoac\WindowsFormsApplication1\InputCollector\obj\Debug\InputCollector.csproj.GenerateResource.Cache
+G:\lssoac\WindowsFormsApplication1\InputCollector\obj\Debug\InputCollector.exe
+G:\lssoac\WindowsFormsApplication1\InputCollector\obj\Debug\InputCollector.pdb

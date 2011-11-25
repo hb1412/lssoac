@@ -1,0 +1,7 @@
+G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\NetworkInfrasturcture.csproj.GenerateResource.Cache
+G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.dll
+G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.dll
+G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

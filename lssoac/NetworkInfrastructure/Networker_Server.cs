@@ -20,6 +20,7 @@ namespace NetworkInfrastructure
         private Socket sourceSocket;
         private int availableConnectionNumber;
         int nextIdNumber;
+        int activeIdNumber;
         const string filePath = "ServerConfig.ini";
         NetworkServiceAgent serviceAgent;
         struct ClientInfo
@@ -32,6 +33,7 @@ namespace NetworkInfrastructure
         {
             try
             {
+                availableConnectionNumber = 1;
                 serviceAgent = nsa;
                 StreamReader reader = System.IO.File.OpenText(filePath);
                 string ipString = reader.ReadLine();
@@ -70,11 +72,14 @@ namespace NetworkInfrastructure
         {  
             byte[] message=new byte[1024];
             message.Initialize();
-                d.ToByte().CopyTo(message,0);
+            d.setIdNumber(activeIdNumber);
+            d.ToByte().CopyTo(message, 0);
+          
             foreach (ClientInfo c in clientList)
             {     
                 if (c.idNumber==d.getIdNumber() ||d.getIdNumber()==Data.IDNUMBER_BROADCAST)
                 {
+                    
                     c.socket.BeginSend(message, 0, message.Length, SocketFlags.None, new AsyncCallback(OnSend), c.socket);
                 }
             } 
@@ -131,7 +136,13 @@ namespace NetworkInfrastructure
         }
         private int  generateNextIdNumber()
         {
+            activeIdNumber = nextIdNumber;
             return nextIdNumber++;
+        }
+        private void assignIdNumber()
+        {
+            Data idData = new Data();
+            idData.setDataType(Data.DataType.AssignID);
         }
         private void OnAccept(IAsyncResult ar)//assign roles
         {
@@ -141,15 +152,16 @@ namespace NetworkInfrastructure
                 ClientInfo clientInfo = new ClientInfo();
                 clientInfo.socket = sourceSocket;
                 clientInfo.idNumber = generateNextIdNumber();
-                clientList.Add(clientInfo);     
-                
+                clientList.Add(clientInfo);
+                assignIdNumber();
                 availableConnectionNumber--; 
                 if (availableConnectionNumber > 0)
                 {
                     serverSocket.BeginAccept(new AsyncCallback(OnAccept), null);
                 }
                 sourceSocket.BeginReceive(byteData, 0, byteData.Length, SocketFlags.None,
-                    new AsyncCallback(OnReceive), sourceSocket);  
+                    new AsyncCallback(OnReceive), sourceSocket);
+                
             }
             catch (Exception ex)
             {

@@ -10,3 +10,13 @@ G:\lssoac\NetworkServiceAgent\Controller\obj\Debug\Controller.exe
 G:\lssoac\NetworkServiceAgent\Controller\obj\Debug\Controller.pdb
 G:\lssoac\lssoac\Controller\obj\Debug\Controller.exe
 G:\lssoac\lssoac\Controller\obj\Debug\Controller.pdb
+G:\lssoac\lssoac\Controller\bin\Debug\Controller.exe
+G:\lssoac\lssoac\Controller\bin\Debug\Controller.pdb
+G:\lssoac\lssoac\Controller\obj\Debug\ResolveAssemblyReference.cache
+G:\lssoac\lssoac\Controller\obj\Debug\Controller.Properties.Resources.resources
+G:\lssoac\lssoac\Controller\obj\Debug\Controller.csproj.GenerateResource.Cache
+G:\lssoac\lssoac\Controller\bin\Debug\Debugger.dll
+G:\lssoac\lssoac\Controller\bin\Debug\WindowsFormsApplication1.dll
+G:\lssoac\lssoac\Controller\bin\Debug\WindowsFormsApplication1.pdb
+G:\lssoac\lssoac\Controller\bin\Debug\Debugger.pdb
+G:\lssoac\lssoac\Controller\obj\Debug\Controller.MainUI.resources

@@ -5,3 +5,10 @@ G:\lssoac\WindowsFormsApplication1\Executor.cs\obj\Debug\Executor.cs.Properties.
 G:\lssoac\WindowsFormsApplication1\Executor.cs\obj\Debug\Executor.csproj.GenerateResource.Cache
 G:\lssoac\WindowsFormsApplication1\Executor.cs\obj\Debug\Executor.cs.exe
 G:\lssoac\WindowsFormsApplication1\Executor.cs\obj\Debug\Executor.cs.pdb
+G:\lssoac\lssoac\Executor.cs\bin\Debug\Executor.cs.exe
+G:\lssoac\lssoac\Executor.cs\bin\Debug\Executor.cs.pdb
+G:\lssoac\lssoac\Executor.cs\obj\Debug\ResolveAssemblyReference.cache
+G:\lssoac\lssoac\Executor.cs\obj\Debug\Executor.cs.Properties.Resources.resources
+G:\lssoac\lssoac\Executor.cs\obj\Debug\Executor.csproj.GenerateResource.Cache
+G:\lssoac\lssoac\Executor.cs\obj\Debug\Executor.cs.exe
+G:\lssoac\lssoac\Executor.cs\obj\Debug\Executor.cs.pdb

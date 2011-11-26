@@ -5,3 +5,15 @@ G:\lssoac\WindowsFormsApplication1\InputCollector\obj\Debug\InputCollector.Prope
 G:\lssoac\WindowsFormsApplication1\InputCollector\obj\Debug\InputCollector.csproj.GenerateResource.Cache
 G:\lssoac\WindowsFormsApplication1\InputCollector\obj\Debug\InputCollector.exe
 G:\lssoac\WindowsFormsApplication1\InputCollector\obj\Debug\InputCollector.pdb
+G:\lssoac\lssoac\InputCollector\bin\Debug\InputCollector.exe
+G:\lssoac\lssoac\InputCollector\bin\Debug\InputCollector.pdb
+G:\lssoac\lssoac\InputCollector\obj\Debug\ResolveAssemblyReference.cache
+G:\lssoac\lssoac\InputCollector\obj\Debug\InputCollector.Properties.Resources.resources
+G:\lssoac\lssoac\InputCollector\obj\Debug\InputCollector.csproj.GenerateResource.Cache
+G:\lssoac\lssoac\InputCollector\obj\Debug\InputCollector.exe
+G:\lssoac\lssoac\InputCollector\obj\Debug\InputCollector.pdb
+G:\lssoac\lssoac\InputCollector\obj\Debug\InputCollector.MainUI.resources
+G:\lssoac\lssoac\InputCollector\bin\Debug\Debugger.dll
+G:\lssoac\lssoac\InputCollector\bin\Debug\WindowsFormsApplication1.dll
+G:\lssoac\lssoac\InputCollector\bin\Debug\WindowsFormsApplication1.pdb
+G:\lssoac\lssoac\InputCollector\bin\Debug\Debugger.pdb

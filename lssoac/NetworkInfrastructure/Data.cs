@@ -17,28 +17,50 @@ namespace NetworkInfrastructure
     }
     
     public  class Data
-    {    
+    {
+        protected DataType dataType;//indicate the class type of the data.
         protected int dataLength;
         protected int idNumber;
         protected const int STARTINDEX_LENGTH = 0;//the start index of the field 'dataLength' int the byte sequence 
-        protected const int STARTINDEX_IDNUMBER = sizeof(int);
+        protected const int STARTINDEX_DATATYPE = sizeof(int);
+        protected const int STARTINDEX_IDNUMBER = sizeof(int)*2;
         public const int IDNUMBER_NULL = -1;
         public const int IDNUMBER_BROADCAST = 0;
         public const int IDNUMBER_MINNORMAL = 16;
+
+        public enum DataType
+        {
+            BaseData,
+            AssignID,
+            StatusSignal,
+            Command
+        };
         public Data()
         {
+            dataType = DataType.BaseData;
             dataLength = sizeof(int);
             idNumber =IDNUMBER_NULL;
         }
+        public void setIdNumber(int id)
+        {
+            idNumber = id;
+        }
+        public void setDataType(DataType dt)
+        {
+            dataType = dt;
+        }
         public Data(byte[] data)
         {
+            //dataType = DataType.BaseData;
             dataLength = BitConverter.ToInt32(data, STARTINDEX_LENGTH);
+            dataType =(DataType) BitConverter.ToInt32(data, STARTINDEX_DATATYPE);
             idNumber = BitConverter.ToInt32(data, STARTINDEX_IDNUMBER);
         }
         public virtual byte[] ToByte()
         {
             List<byte> result = new List<byte>();
             result.AddRange(BitConverter.GetBytes(dataLength));
+            result.AddRange(BitConverter.GetBytes((int)dataType));
             result.AddRange(BitConverter.GetBytes(idNumber));
            
             return result.ToArray();
@@ -46,6 +68,10 @@ namespace NetworkInfrastructure
         public int getIdNumber()
         {
             return idNumber;
+        }
+        public DataType getDataType()
+        {
+            return dataType;
         }
 
     }
@@ -60,14 +86,17 @@ namespace NetworkInfrastructure
 
         public Command()
         {
+            dataType = DataType.Command;
             dataLength = sizeof (int)*2+sizeof (double );
             command = 0;
             inputO2Density = 0.0;
         }
         public Command(byte[] data)
         {
+           // dataType = DataType.Command;
             dataLength = BitConverter.ToInt32(data, STARTINDEX_LENGTH);
-            command = BitConverter.ToInt32(data, STARTINDEX_IDNUMBER);
+            dataType = (DataType)BitConverter.ToInt32(data, STARTINDEX_DATATYPE);
+            idNumber= BitConverter.ToInt32(data, STARTINDEX_IDNUMBER);
             command = BitConverter.ToInt32(data, STARTINDEX_COMMAND);
             inputO2Density = BitConverter.ToInt32(data, STARTINDEX_INPUTO2DENSITY);
 
@@ -76,6 +105,7 @@ namespace NetworkInfrastructure
         {
             List<byte> result = new List<byte>();
             result.AddRange(BitConverter.GetBytes(dataLength ));
+            result.AddRange(BitConverter.GetBytes((int)dataType));
             result.AddRange(BitConverter.GetBytes(idNumber));
             result.AddRange(BitConverter.GetBytes(command));
             result.AddRange(BitConverter.GetBytes(inputO2Density));
@@ -98,6 +128,7 @@ namespace NetworkInfrastructure
         const int STARTINDEX_CARBONDIOXIDEDENSITY = sizeof(double ) * 4 + sizeof(int)*2 ;
         public StatusSignal()
         {
+            dataType = DataType.StatusSignal;
             dataLength =sizeof(double) * 5+sizeof(int);
             temperature = 0.0;
             humidity = 0.0;
@@ -108,6 +139,7 @@ namespace NetworkInfrastructure
         }
         public StatusSignal(double t, double h, double p, double o, double c)
         {
+            dataType = DataType.StatusSignal;
             dataLength = sizeof(double) * 5+sizeof(int);
             temperature = t;
             humidity = h;
@@ -117,7 +149,10 @@ namespace NetworkInfrastructure
         }
         public StatusSignal(byte[] data)
         {
+            //dataType = DataType.StatusSignal;
             dataLength =BitConverter.ToInt32(data,STARTINDEX_LENGTH);
+            dataType = (DataType)BitConverter.ToInt32(data, STARTINDEX_DATATYPE);
+            idNumber = BitConverter.ToInt32(data, STARTINDEX_IDNUMBER);
             temperature = BitConverter.ToInt32(data, STARTINDEX_TEMPERATURE);
             humidity = BitConverter.ToInt32(data, STARTINDEX_HUMIDITY);
             pressure = BitConverter.ToInt32(data, STARTINDEX_PRESSURE);
@@ -128,6 +163,7 @@ namespace NetworkInfrastructure
         {
             List<byte> result = new List<byte>();
             result.AddRange(BitConverter .GetBytes(dataLength));
+            result.AddRange(BitConverter.GetBytes((int)dataType));
             result.AddRange(BitConverter.GetBytes(idNumber));
             result.AddRange(BitConverter.GetBytes(temperature));
             result.AddRange(BitConverter.GetBytes(humidity));

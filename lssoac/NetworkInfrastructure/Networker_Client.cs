@@ -11,14 +11,17 @@ namespace NetworkInfrastructure
 {
     public class Networker_Client
     {
+
         private Socket clientSocket;//local socket.
         private IPAddress serverAddress;// the IP address of the server
         private int serverPort;//the port number of the server 
         private byte[] byteData = new byte[1024];//the buffer for receiving data.
-
+        private int localIdNumber;
         const string filePath = "ClientConfig.ini";//ip and port number configuration file
-        public Networker_Client()//constructor.do the initialization.
+        NetworkServiceAgent serviceAgent;
+        public Networker_Client(NetworkServiceAgent nsa)//constructor.do the initialization.
         {
+            serviceAgent = nsa;
             StreamReader reader = System.IO.File.OpenText(filePath);
             string ipString = reader.ReadLine();
             serverPort =Int32.Parse(reader.ReadLine());
@@ -76,6 +79,7 @@ namespace NetworkInfrastructure
         {
             try
             {
+                d.setIdNumber(localIdNumber);//sign the signature.
                 byte[] message = new byte[1024];
                 message.Initialize();
                 d.ToByte().CopyTo(message, 0);
@@ -110,29 +114,30 @@ namespace NetworkInfrastructure
             byte[] msgBuffer = new byte[1024];
             try
             {
-                
-               
+                clientSocket.EndReceive(ar);
+              
+                byteData.CopyTo(msgBuffer, 0);
 
-                    clientSocket.EndReceive(ar);
-                    //lock (lockThis)
-                    {
-                        byteData.CopyTo(msgBuffer, 0);
-                        for (int i = 0; i < byteData.Length; i++)
-                            byteData[i] = 0xff;
-                    }
-                   
-                    clientSocket.BeginReceive(byteData,
-                                              0,
-                                              byteData.Length,
-                                              SocketFlags.None,
-                                              new AsyncCallback(OnReceive),
-                                              null);
+                Data dataRecved = new Data(msgBuffer);
 
-               
+                if (dataRecved.getDataType() != Data.DataType.AssignID)
+                {
+                    serviceAgent.receiveDataHandler(msgBuffer);
+                }
+                else//assign id number
+                {
+                    localIdNumber = dataRecved.getIdNumber();
+                }
 
-                   
-                
-                
+                for (int i = 0; i < byteData.Length; i++)
+                    byteData[i] = 0xff;
+              
+                clientSocket.BeginReceive(byteData,
+                                          0,
+                                          byteData.Length,
+                                          SocketFlags.None,
+                                          new AsyncCallback(OnReceive),
+                                          null); 
             }
             
             catch (Exception ex)
@@ -146,6 +151,12 @@ namespace NetworkInfrastructure
             try
             {
                 clientSocket.EndConnect(ar);
+                clientSocket.BeginReceive(byteData,
+                                          0,
+                                          byteData.Length,
+                                          SocketFlags.None,
+                                          new AsyncCallback(OnReceive),
+                                          null); 
             
             }
             catch (Exception ex)

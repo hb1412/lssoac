@@ -5,3 +5,10 @@ G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFor
 G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.dll
 G:\lssoac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+G:\lssoac\lssoac\NetworkInfrastructure\bin\Debug\WindowsFormsApplication1.dll
+G:\lssoac\lssoac\NetworkInfrastructure\bin\Debug\WindowsFormsApplication1.pdb
+G:\lssoac\lssoac\NetworkInfrastructure\obj\Debug\ResolveAssemblyReference.cache
+G:\lssoac\lssoac\NetworkInfrastructure\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+G:\lssoac\lssoac\NetworkInfrastructure\obj\Debug\NetworkInfrasturcture.csproj.GenerateResource.Cache
+G:\lssoac\lssoac\NetworkInfrastructure\obj\Debug\WindowsFormsApplication1.dll
+G:\lssoac\lssoac\NetworkInfrastructure\obj\Debug\WindowsFormsApplication1.pdb
